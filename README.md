@@ -3,7 +3,7 @@
 This project consists in a Pokedex where the user can see almost all pokemons and its skills.
 Also this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 Technologies that I used.
 
