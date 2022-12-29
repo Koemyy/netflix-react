@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-function Singup() {
+function Signup() {
     return (
         <div>
             <div className="w-full h-screen">
@@ -10,7 +10,7 @@ function Singup() {
                 <div className="fixed w-full px-4 py-24 z-50">
                     <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white">
                         <div className="max-w-[320px] mx-auto py-16">
-                            <h1 className="text-3xl font-bold">Sign Up</h1>
+                            <h1 className="text-3xl font-bold">Sign In</h1>
                             <form className="w-full flex flex-col py-4">
                                 <input className="p-3 my-2 bg-gray-700 rounded" placeholder="Email" type="email" autoComplete="email"/>
                                 <input className="p-3 my-2 bg-gray-700 rounded" placeholder="Password" type="password" autoComplete="current-password"/>
@@ -31,4 +31,4 @@ function Singup() {
     )
 }
 
-export default Singup
+export default Signup
