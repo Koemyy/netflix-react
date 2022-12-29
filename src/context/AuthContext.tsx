@@ -19,16 +19,16 @@ export function AuthContextProvider({children}: AuthComponent){
     }
 
     function logOut () {
-        return signOut(auth)
+        return signOut(auth);
     }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             // @ts-ignore
-            setUser(currentUser)
+            setUser(currentUser);
         })
         return () => {
-            unsubscribe()
+            unsubscribe();
         }
     })
 
