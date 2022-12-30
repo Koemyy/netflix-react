@@ -9,16 +9,16 @@ function Login() {
     //@ts-ignore
     const {user, logIn} = UserAuth();
     const navigate = useNavigate();
-    // @ts-ignore
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault()
         setError('')
         try {
             await logIn(email, password)
             navigate('/')
         } catch (error) {
-            // @ts-ignore
-            setError(error.message)
+            if (error instanceof Error) {
+                setError(error.message)
+            }
         }
     }
     return (
@@ -34,7 +34,11 @@ function Login() {
                         <div className="max-w-[320px] mx-auto py-16">
                             <h1 className="text-3xl font-bold">Sign In</h1>
                             {
-                                error ? <p className="bg-orange-600 rounded p-3 mt-3">{error}</p> : null
+                                error ?
+                                    <p className="bg-orange-600 rounded p-3 mt-3">{error.slice()
+                                        .replace('(auth/email-already-in-use)', 'You have entered an invalid email or password.')
+                                        .replace('(auth/user-not-found).', 'You have entered an invalid email or password.')
+                                        .replace(' (auth/wrong-password).', 'You have entered an invalid email or password.')}</p> : null
                             }
                             <form onSubmit={handleSubmit} className="w-full flex flex-col py-4">
                                 <input onChange={(e) => setEmail(e.target.value)}
