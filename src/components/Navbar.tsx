@@ -5,7 +5,6 @@ function Navbar() {
     // @ts-ignore
     const {user, logOut} = UserAuth();
     const navigate = useNavigate();
-    //console.log(user.email)
 
     const handleLogout = async () => {
         try {
@@ -26,7 +25,9 @@ function Navbar() {
                         <Link to="/account">
                             <button className="text-white pr-4">Account</button>
                         </Link>
-                        <button onClick={handleLogout} className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white">Logout</button>
+                        <button onClick={handleLogout}
+                                className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white">Logout
+                        </button>
                     </div>
                     :
                     <div>
