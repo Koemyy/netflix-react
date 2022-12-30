@@ -1,6 +1,6 @@
 # Netflix React 🍿
 
-This project consists in a Pokedex where the user can see almost all pokemons and its skills.
+This project consists in a Netflix clone where the user can see new, trending, top-rated and horror movies, and also add movies in their favorite collection.
 Also this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 🚀 Technologies
