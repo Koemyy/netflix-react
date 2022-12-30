@@ -15,7 +15,7 @@ export function AuthContextProvider({children}: AuthComponent){
     }
 
     function logIn (email: string, password: string) {
-        return createUserWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
     }
 
     function logOut () {
