@@ -1,21 +1,22 @@
 import {Link, useNavigate} from "react-router-dom";
 import {UserAuth} from "../context/AuthContext";
-import {useState} from "react";
-function Signup() {
+import {FormEvent, useState} from "react";
+const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    //@ts-ignore
-    const {user, signUp} = UserAuth();
-    const navigate = useNavigate();
-    const handleSubmit = async (e: { preventDefault: () => void; }) => {
-        e.preventDefault()
+    // @ts-ignore
+    const { user, signUp } = UserAuth();
+    const navigate = useNavigate()
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement> | Event) => {
+        e.preventDefault();
         try {
-            await signUp(email, password)
+            await signUp(email, password);
             navigate('/')
-        }catch (error) {
-            console.log(error)
+        } catch (error) {
+            console.log(error);
         }
-    }
+    };
 
     return (
         <div>
