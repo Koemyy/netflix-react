@@ -1,7 +1,7 @@
-# Netflix React 🍿
+# [Netflix React 🍿](https://netflix-react-80ef1.web.app/)
 
 This project consists in a Netflix clone where the user can see new, trending, top-rated and horror movies, and also add movies in their favorite collection.
-Also this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Also, this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 🚀 Technologies
 
